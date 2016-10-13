@@ -1,6 +1,8 @@
 var redis = require('redis');
 var client = redis.createClient();
  
+process.on('SIGINT', function (){ process.exit() });
+
 client.on('connect', function() {
     console.log('connected');
 });
