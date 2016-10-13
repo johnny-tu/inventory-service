@@ -1,7 +1,7 @@
-FROM node:0.12.4
+FROM node:slim
 
 COPY inventoryService.js /src/ 
 WORKDIR /src
 
 RUN npm install redis
-CMD ["node", "inventoryService.js"]
+CMD ["nodejs", "inventoryService.js"]
